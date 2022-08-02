@@ -1,0 +1,27 @@
+apple: "I am red in color"
+18UCS104: "My roll number"
+---
+# lists
+- apple
+- mango
+- orange
+- Guava
+---
+# block level
+cities:
+ - new delhi
+ - mumbai
+ - kolkata
+---
+cities: [new delhi, mumbai, kolkata]
+---
+{mango: "yellow", age: 56}
+
+
+school:
+ - name: "HFS"
+   Principal: Sr. Joseph
+   students: !!seq
+    - roll: 12
+      name: Chatrughan
+      marks: 34

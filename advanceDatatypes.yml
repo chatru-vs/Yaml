@@ -1,0 +1,71 @@
+student: !!seq
+ - marks
+ - name
+ - roll_no
+ - dob
+
+subjects: [maths, physics, geo, history]
+
+# nested sequence
+-
+ - hello
+ - world
+ - enjoy
+-
+ - folks
+ - fun
+ - joy
+
+# key value pairs
+
+name: Chatrughan
+course: !!map
+ name: IT
+ subjects: 32
+
+# pairs
+pair example: !!pairs
+ - job: student
+ - job: intern
+
+pair example: !!pairs [job: student, job: intern]
+
+# set will have unique values
+enroll: !!set
+ ? 18
+ ? 12
+ ? 10
+
+# sequence of objects
+course: !!seq
+ - course name: python
+   price: 89
+   duration: 3hrs
+ - course name: sql
+   price: 30
+   duration: 2hrs
+ - {course name: c++, price: 80, duration: 4hrs}
+
+# dictionary
+
+course: !!omap
+ - course 1:
+    course name: python
+    price: &price 89
+    duration: 3hrs
+ - course 2:
+    course name: sql
+    price: 30
+    duration: 2hrs
+ - course 3:
+    {course name: c++, price: *price, duration: 4hrs}
+
+
+# reuse properties
+
+base: &base
+  var1: value1
+  var2: value2
+  var3: value3
+foo:
+  <<: *base
